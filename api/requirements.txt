@@ -1,22 +1,21 @@
-# Pinned for security scanning. Direct deps: fastapi, uvicorn[standard], python-dotenv
+# Pinned for security scanning (works on Python 3.9+). Direct deps: fastapi, uvicorn[standard], python-dotenv
 annotated-doc==0.0.5
-annotated-types==0.8.0
-anyio==4.15.1
-click==8.5.0
+annotated-types==0.7.0
+anyio==4.12.1
+click==8.1.8
 exceptiongroup==1.3.1 ; python_version < "3.11"
-fastapi==0.142.2
+fastapi==0.128.8
 h11==0.16.0
 httptools==0.8.0
 idna==3.20
-opentelemetry-api==1.45.0
 pydantic==2.13.5
 pydantic_core==2.46.5
-python-dotenv==1.2.3
+python-dotenv==1.2.1
 PyYAML==6.0.3
-starlette==1.7.0
-typing-inspection==0.4.4
+starlette==0.49.3
+typing-inspection==0.4.2
 typing_extensions==4.16.0
-uvicorn[standard]==0.54.0
+uvicorn[standard]==0.39.0
 uvloop==0.22.1
-watchfiles==1.3.0
-websockets==16.1.1
+watchfiles==1.1.1
+websockets==15.0.1
