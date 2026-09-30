@@ -1,9 +1,9 @@
 export const ME = 'You'
-export const MEMBERS = ['You', 'Emma', 'Lucas', 'Sofia']
-export const PROFILE = { name: 'Alex Peeters', initial: 'A' }
+export const MEMBERS = ['You', 'Nora', 'Lucas', 'Sofia']
+export const PROFILE = { name: 'Emma Peeters', initial: 'E' }
 export const initial = (m: string) => (m === ME ? PROFILE.initial : m[0])
-export const AV_COLOR: Record<string, string> = { You: '#1E6FD9', Emma: '#C25A12', Lucas: '#0B2545', Sofia: '#E39A5B' }
-export const IBAN: Record<string, string> = { Emma: 'BE68 •••• •••• 4512', Lucas: 'BE12 •••• •••• 0934', Sofia: 'BE55 •••• •••• 7781' }
+export const AV_COLOR: Record<string, string> = { You: '#1E6FD9', Nora: '#C25A12', Lucas: '#0B2545', Sofia: '#E39A5B' }
+export const IBAN: Record<string, string> = { Nora: 'BE68 •••• •••• 4512', Lucas: 'BE12 •••• •••• 0934', Sofia: 'BE55 •••• •••• 7781' }
 
 export type Cat = 'Rent' | 'Utilities' | 'Groceries' | 'Drinks' | 'Household' | 'Leisure' | 'Personal'
 export const ICON: Record<Cat, string> = { Rent: 'home', Utilities: 'bolt', Groceries: 'cart', Drinks: 'drink', Household: 'roll', Leisure: 'ticket', Personal: 'user' }
@@ -51,16 +51,16 @@ const past = (id: number, title: string, cat: Cat, amount: number, paidBy: strin
 })
 
 export const seedExpenses: Expense[] = [
-  { id: 1, title: 'Rent October', cat: 'Rent', amount: 1600, paidBy: 'Emma', shares: equalShares(MEMBERS), requested: true, settled: ['Lucas'], date: '28 Sep', month: 'Sep' },
+  { id: 1, title: 'Rent October', cat: 'Rent', amount: 1600, paidBy: 'Nora', shares: equalShares(MEMBERS), requested: true, settled: ['Lucas'], date: '28 Sep', month: 'Sep' },
   { id: 2, title: 'Engie electricity', cat: 'Utilities', amount: 96, paidBy: 'You', shares: equalShares(MEMBERS), requested: false, settled: [], date: '27 Sep', month: 'Sep' },
   { id: 3, title: 'Colruyt groceries', cat: 'Groceries', amount: 64.8, paidBy: 'Lucas', shares: equalShares(MEMBERS), requested: true, settled: [], date: '25 Sep', month: 'Sep' },
   { id: 4, title: 'Toilet paper and soap', cat: 'Household', amount: 18.4, paidBy: 'Sofia', shares: equalShares(MEMBERS), requested: true, settled: ['You'], date: '22 Sep', month: 'Sep' },
-  past(10, 'Rent September', 'Rent', 1600, 'Emma', '28 Aug', 'Aug'),
+  past(10, 'Rent September', 'Rent', 1600, 'Nora', '28 Aug', 'Aug'),
   past(11, 'Engie electricity', 'Utilities', 88, 'You', '26 Aug', 'Aug'),
   past(12, 'Proximus internet', 'Utilities', 49, 'You', '24 Aug', 'Aug'),
   past(13, 'Delhaize groceries', 'Groceries', 71.3, 'Sofia', '19 Aug', 'Aug'),
-  past(14, 'Drinks for the barbecue', 'Drinks', 42, 'Lucas', '9 Aug', 'Aug', { Lucas: 50, You: 20, Emma: 15, Sofia: 15 }),
-  past(20, 'Rent August', 'Rent', 1600, 'Emma', '28 Jul', 'Jul'),
+  past(14, 'Drinks for the barbecue', 'Drinks', 42, 'Lucas', '9 Aug', 'Aug', { Lucas: 50, You: 20, Nora: 15, Sofia: 15 }),
+  past(20, 'Rent August', 'Rent', 1600, 'Nora', '28 Jul', 'Jul'),
   past(21, 'Engie electricity', 'Utilities', 79, 'You', '26 Jul', 'Jul'),
   past(22, 'Colruyt groceries', 'Groceries', 58.6, 'Lucas', '15 Jul', 'Jul'),
 ]
@@ -82,12 +82,12 @@ export const seedFilters = Object.fromEntries(CATS.map((c) => [c, c !== 'Persona
 
 export const seedGoals: Goal[] = [
   { id: 1, name: 'Vacuum cleaner', target: 320, contribs: [
-    { id: 1, who: 'Emma', amount: 100, date: '20 Sep', note: 'First batch' },
+    { id: 1, who: 'Nora', amount: 100, date: '20 Sep', note: 'First batch' },
     { id: 2, who: 'You', amount: 50, date: '21 Sep' },
     { id: 3, who: 'Lucas', amount: 40, date: '24 Sep' },
   ] },
   { id: 2, name: 'Living room sofa', target: 1500, contribs: [
-    { id: 4, who: 'You', amount: 450, date: '2 Sep' }, { id: 5, who: 'Emma', amount: 300, date: '4 Sep' }, { id: 6, who: 'Lucas', amount: 150, date: '9 Sep' },
+    { id: 4, who: 'You', amount: 450, date: '2 Sep' }, { id: 5, who: 'Nora', amount: 300, date: '4 Sep' }, { id: 6, who: 'Lucas', amount: 150, date: '9 Sep' },
   ] },
 ]
 
